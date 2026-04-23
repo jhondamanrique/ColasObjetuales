@@ -6,6 +6,7 @@ public class Menu {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Metodos m = new Metodos();
+        Validaciones v = new Validaciones();
         Queue<Cliente> ColaPendiente = new LinkedList<>();
         Queue<Cliente> ColaAtendidos = new LinkedList<>();
 
@@ -22,7 +23,7 @@ public class Menu {
             System.out.println("5) Mostrar turnos atendidos y pendientes");
             System.out.println("6) Salir");
             System.out.println("Seleccione una opcion: ");
-            opt = Integer.parseInt(sc.nextLine());
+            opt = v.ValidarEntero(sc);
 
             switch (opt) {
                 case 1:
